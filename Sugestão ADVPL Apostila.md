@@ -88,6 +88,12 @@ End Function
 
 <a href="https://matheusmoraes10.github.io/SugestaoUniversidadeTOTVS/">https://matheusmoraes10.github.io/SugestaoUniversidadeTOTVS/</a>
 
+### Opção 3 --- Baixe o arquivo e um leitor de Markdown, como o Typedown, por exemplo. E Utilize como se fosse um PDF.
+
+<a href="https://apps.microsoft.com/detail/9p8tcw4h2hb4?hl=en-US&gl=BR">https://apps.microsoft.com/detail/9p8tcw4h2hb4?hl=en-US&gl=BR</a>
+
+
+
 <h2>Exemplo de conteudo escrito</h2>
 <p>
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores est sint obcaecati beatae possimus blanditiis laudantium distinctio? Alias similique odit impedit quaerat ducimus molestiae reiciendis ipsa, harum laboriosam quos eius, quas pariatur, sunt provident ut numquam corrupti? Voluptatum soluta facere error reprehenderit officiis dolor voluptatem laudantium sapiente consequuntur libero accusamus aliquid, est molestiae, saepe quasi assumenda beatae quae ab architecto? Quasi numquam labore ratione quod commodi, sunt perferendis cumque dolore aut magnam ut, autem aperiam aliquam. Sapiente nesciunt odit vitae dicta modi praesentium accusantium! Obcaecati velit impedit voluptates deleniti veniam quas, dolorem earum rerum maxime, animi consequatur odio, assumenda illo!
