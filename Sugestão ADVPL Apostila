@@ -1,0 +1,10 @@
+# ADVPL WEB – PROTHEUS
+
+### Código ADVPL
+
+```advpl
+// Exemplo de código ADVPL
+User Function HelloWorld()
+    MsgInfo("Olá, Mundo!", "Exemplo")
+Return
+```
