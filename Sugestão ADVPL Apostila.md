@@ -84,6 +84,12 @@ Static Function ConsultaCliente()
 End Function
 ```
 
+<h2>Exemplo de conteudo escrito</h2>
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores est sint obcaecati beatae possimus blanditiis laudantium distinctio? Alias similique odit impedit quaerat ducimus molestiae reiciendis ipsa, harum laboriosam quos eius, quas pariatur, sunt provident ut numquam corrupti? Voluptatum soluta facere error reprehenderit officiis dolor voluptatem laudantium sapiente consequuntur libero accusamus aliquid, est molestiae, saepe quasi assumenda beatae quae ab architecto? Quasi numquam labore ratione quod commodi, sunt perferendis cumque dolore aut magnam ut, autem aperiam aliquam. Sapiente nesciunt odit vitae dicta modi praesentium accusantium! Obcaecati velit impedit voluptates deleniti veniam quas, dolorem earum rerum maxime, animi consequatur odio, assumenda illo!
+</p>
+
+
 ### Exemplo de Código ADVPL com Botão de Copiar --- Opção 2: Criando uma página HTML e publicando-a em hospedagem gratuita, por exemplo, o GitHub Pages (Mais esforço aplicado)
 
 <a href="">Link página html</a>
