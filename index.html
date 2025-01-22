@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Códigos ADVPL</title>
+    <style>
+        .code-container {
+            border: 2px solid rgb(246, 246, 76);
+            /* Borda amarela */
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            font-family: monospace;
+            position: relative;
+            margin-bottom: 20px;
+            display: inline-block;
+            max-width: 100%;
+            width: auto;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="img/Logo_Advpl_Web_Protheus.png" alt="Logo ADVPL WEB">
+    </div>
+    <div class="code-container">
+        <button class="copy-btn" onclick="copyToClipboard()">Copiar Código</button>
+        <pre>
+            <code id="code-block">
+            <!-- Exemplo de código em ADVPL -->
+            #Include "TOTVS.CH"
+
+            // Função principal do programaF
+            User Function Main()
+                Local aMenu := {}
+                
+                // Construção do menu
+                AAdd(aMenu, {"1. Cadastrar Cliente", {|| CadastroCliente()}})
+                AAdd(aMenu, {"2. Consultar Cliente", {|| ConsultaCliente()}})
+                AAdd(aMenu, {"3. Sair", {|| MsgInfo("Saindo do sistema...")}})
+                
+                // Mostra o menu
+                While .T.
+                    Local cOpcao := MenuTitle("Menu Principal", aMenu, .T.)
+                    Eval(aMenu[Val(cOpcao)][2])
+                    If Val(cOpcao) == 3
+                        Exit
+                    EndIf
+                EndWhile
+                
+                Return
+            End Function
+            
+            // Função para cadastrar cliente
+            Static Function CadastroCliente()
+                Local cCodigo := Space(10)
+                Local cNome := Space(50)
+                Local cTelefone := Space(15)
+                Local aCliente := {}
+                
+                @ 01, 02 SAY "Cadastro de Cliente" COLOR "W+/B"
+                @ 03, 02 SAY "Código:" GET cCodigo PICTURE "@!"
+                @ 04, 02 SAY "Nome:" GET cNome PICTURE "@!"
+                @ 05, 02 SAY "Telefone:" GET cTelefone PICTURE "@!"
+                READ
+                
+                If Empty(cCodigo) .OR. Empty(cNome)
+                    MsgStop("Código e Nome são obrigatórios!")
+                Else
+                    aCliente := {cCodigo, cNome, cTelefone}
+                    DbUseArea(.T., "DBFNTX", "Clientes", .T., .T.)
+                    DbAppend()
+                    FIELD->CODIGO := aCliente[1]
+                    FIELD->NOME := aCliente[2]
+                    FIELD->TELEFONE := aCliente[3]
+                    DbCloseArea()
+                    MsgInfo("Cliente cadastrado com sucesso!")
+                EndIf
+                
+                Return
+            End Function
+            
+            // Função para consultar clientes
+            Static Function ConsultaCliente()
+                Local aDados := {}
+                Local nLinha := 3
+                
+                DbUseArea(.T., "DBFNTX", "Clientes", .T., .F.)
+                
+                If !DbGoTop()
+                    MsgStop("Não há clientes cadastrados!")
+                    Return
+                EndIf
+                
+                @ 01, 02 CLEAR
+                @ 01, 02 SAY "Consulta de Clientes" COLOR "W+/B"
+                @ 02, 02 SAY "Código     Nome                     Telefone" COLOR "W+/B"
+                
+                While !Eof()
+                    aDados := {FIELD->CODIGO, FIELD->NOME, FIELD->TELEFONE}
+                    @ nLinha, 02 SAY PadR(aDados[1], 10) + " " + PadR(aDados[2], 25) + " " + PadR(aDados[3], 15)
+                    nLinha++
+                    DbSkip()
+                EndDo
+                
+                DbCloseArea()
+                
+                Return
+            End Function
+            </code>
+        </pre>
+    </div>
+    <div>
+        <h2>Exemplo de conteudo escrito</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores est sint obcaecati beatae possimus
+            blanditiis laudantium distinctio? Alias similique odit impedit quaerat ducimus molestiae reiciendis ipsa,
+            harum laboriosam quos eius, quas pariatur, sunt provident ut numquam corrupti? Voluptatum soluta facere
+            error reprehenderit officiis dolor voluptatem laudantium sapiente consequuntur libero accusamus aliquid, est
+            molestiae, saepe quasi assumenda beatae quae ab architecto? Quasi numquam labore ratione quod commodi, sunt
+            perferendis cumque dolore aut magnam ut, autem aperiam aliquam. Sapiente nesciunt odit vitae dicta modi
+            praesentium accusantium! Obcaecati velit impedit voluptates deleniti veniam quas, dolorem earum rerum
+            maxime, animi consequatur odio, assumenda illo!
+        </p>
+    </div>
+    <script>
+        function copyToClipboard() {
+            const codeBlock = document.getElementById('code-block').innerText;
+            navigator.clipboard.writeText(codeBlock)
+                .then(() => {
+                    alert('Código copiado para a área de transferência!');
+                })
+                .catch(err => {
+                    alert('Erro ao copiar código: ' + err);
+                });
+        }
+    </script>
+</body>
+
+</html>
