@@ -1,6 +1,6 @@
 # ![ADVPL Web Protheus](https://drive.google.com/uc?export=view&id=1j7DlkhrP2i3ocKsC5bQn_0ZAw6zrPIj6)
 
-#### Exemplo de Código ADVPL com Botão de Copiar (Opção 1, bloco de código nativo do markdown (Menos esforço aplicado))
+#### Exemplo de Código ADVPL com Botão de Copiar --- Opção 1: bloco de código nativo do markdown (Menos esforço aplicado)
 
 ```
 #Include "TOTVS.CH"
@@ -84,7 +84,7 @@ Static Function ConsultaCliente()
 End Function
 ```
 
-### Exemplo de Código ADVPL com Botão de Copiar (Opção 2, criando uma pagina html e publicando em hospedagem grátis, por exemplo github pages (Mais esforço aplicado))
+### Exemplo de Código ADVPL com Botão de Copiar --- Opção 2: Criando uma página HTML e publicando-a em hospedagem gratuita, por exemplo, o GitHub Pages (Mais esforço aplicado)
 
 <a href="">Link página html</a>
 
